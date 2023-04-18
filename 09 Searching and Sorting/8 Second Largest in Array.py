@@ -57,3 +57,23 @@ def secondLargestElement(arr, n):
     return secondLargest 
 
 
+#Taking Input Using Fast I/O
+def takeInput() :
+    n = int(stdin.readline().rstrip())
+    if n != 0:
+        arr = list(map(int, stdin.readline().rstrip().split(" ")))
+        return arr, n
+
+    return list(), 0
+
+
+
+#main
+t = int(stdin.readline().rstrip())
+
+while t > 0 : 
+    
+    arr, n = takeInput()
+    print(secondLargestElement(arr, n))
+
+    t -= 1
